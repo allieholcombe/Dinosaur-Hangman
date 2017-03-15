@@ -3,6 +3,16 @@
   src: url('../fonts/dinosaur.ttf') format('truetype');
 }
 
+.overlay {
+  background-color: rgba(96, 93, 97, 0.6);
+  z-index: 1000;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: none;
+  border: 1px solid red;
+}
+
 .letter {
   padding: 10px;
   padding-top: 22px;
@@ -13,6 +23,14 @@
 
 .choose-letter {
   border: 4px solid orange;
+  margin: 4px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.clicked {
+  background-color: purple;
 }
 
 .blank {
@@ -20,9 +38,18 @@
   width: 62px;
   height: 57px;
   margin: 0 5px;
+  border: 2px solid blue;
+}
+
+.yellow {
+  background-color: yellow;
 }
 
 img {
   height: 400px;
   width: auto;
+}
+
+.unclickable {
+
 }
