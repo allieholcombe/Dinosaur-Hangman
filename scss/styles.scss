@@ -4,14 +4,22 @@
 }
 
 .letter {
-  border: 4px solid orange;
   padding: 10px;
   padding-top: 22px;
-  text-transform: lowercase;
   font-family: 'Dinosaur', sans-serif;
   font-size: 40px;
   display: inline-block;
+}
 
+.choose-letter {
+  border: 4px solid orange;
+}
+
+.blank {
+  border-bottom: 3px solid black;
+  width: 62px;
+  height: 57px;
+  margin: 0 5px;
 }
 
 img {
