@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'Dinosaur';
+  src: url('../fonts/dinosaur.ttf') format('truetype';)
+}
+
+.letter {
+  border: 2px solid orange;
+  padding: 2px;
+  font-family: 'Dinosaur', sans-serif;
+}

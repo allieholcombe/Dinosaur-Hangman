@@ -25,7 +25,7 @@ var sourcemaps = require('gulp-sourcemaps');
 gulp.task('jshint', function(){
   return gulp.src(['js/*.js'])
     .pipe(jshint())
-    .pipe(jshint/reporter('default'));
+    .pipe(jshint.reporter('default'));
 });
 
 gulp.task('concatInterface', function(){
@@ -35,10 +35,10 @@ gulp.task('concatInterface', function(){
 });
 
 gulp.task('jsBrowserify', ['concatInterface'], function(){
-  return browserify({entries: ['./tmp/allConcat.js']})
+  return browserify({ entries: ['./tmp/allConcat.js']})
     .bundle()
     .pipe(source('app.js'))
-    .pipe(gulp.dest('./build/js'))
+    .pipe(gulp.dest('./build/js'));
 });
 
 gulp.task('minifyScripts', ['jsBrowserify'], function(){
