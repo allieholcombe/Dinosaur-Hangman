@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'Dinosaur';
+  src: url("../fonts/dinosaur.ttf") format("truetype"); }
+
+div {
+  display: block-inline; }
+
+.letter {
+  border: 2px solid orange;
+  padding: 2px;
+  font-family: 'Dinosaur', sans-serif; }
+
+img {
+  height: 400px;
+  width: auto; }
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic3R5bGVzLmNzcyIsInNvdXJjZXMiOlsic3R5bGVzLnNjc3MiXSwic291cmNlc0NvbnRlbnQiOlsiQGZvbnQtZmFjZSB7XG4gIGZvbnQtZmFtaWx5OiAnRGlub3NhdXInO1xuICBzcmM6IHVybCgnLi4vZm9udHMvZGlub3NhdXIudHRmJykgZm9ybWF0KCd0cnVldHlwZScpO1xufVxuXG5kaXYge1xuICAgIGRpc3BsYXk6IGJsb2NrLWlubGluZTtcbn1cblxuLmxldHRlciB7XG4gIGJvcmRlcjogMnB4IHNvbGlkIG9yYW5nZTtcbiAgcGFkZGluZzogMnB4O1xuICBmb250LWZhbWlseTogJ0Rpbm9zYXVyJywgc2Fucy1zZXJpZjtcblxufVxuXG5pbWcge1xuICBoZWlnaHQ6IDQwMHB4O1xuICB3aWR0aDogYXV0bztcbn1cbiJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxVQUFVO0VBQ1IsV0FBVyxFQUFFLFVBQVU7RUFDdkIsR0FBRyxFQUFFLDRCQUE0QixDQUFDLGtCQUFrQjs7QUFHdEQsQUFBQSxHQUFHLENBQUM7RUFDQSxPQUFPLEVBQUUsWUFBWSxHQUN4Qjs7QUFFRCxBQUFBLE9BQU8sQ0FBQztFQUNOLE1BQU0sRUFBRSxnQkFBZ0I7RUFDeEIsT0FBTyxFQUFFLEdBQUc7RUFDWixXQUFXLEVBQUUsc0JBQXNCLEdBRXBDOztBQUVELEFBQUEsR0FBRyxDQUFDO0VBQ0YsTUFBTSxFQUFFLEtBQUs7RUFDYixLQUFLLEVBQUUsSUFBSSxHQUNaIn0= */
