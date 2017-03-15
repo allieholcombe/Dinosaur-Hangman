@@ -25,11 +25,6 @@ Word.prototype.putLetter = function(currentLetter, letterPutter) {
   }
 }
 
-Word.prototype.arrangeAlphabet = function(start, endPlusOne) {
-  for(i = start; i < endPlusOne; i++){
-    makeLetters(i, letters);
-  }
-}
 
 
 exports.wordModule = Word;
