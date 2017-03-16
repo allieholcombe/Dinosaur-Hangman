@@ -2,6 +2,9 @@
   font-family: 'Dinosaur';
   src: url('../fonts/dinosaur.ttf') format('truetype');
 }
+
+$hovergreen: #94c64d;
+
 .container {
   width: 1200px;
   padding: 0;
@@ -34,21 +37,23 @@
   padding: 10px;
   padding-top: 24px;
   font-family: 'Dinosaur', sans-serif;
-  font-size: 40px;
+  font-size: 52px;
   display: inline-block;
 }
 
 .blank {
   vertical-align: top;
   border-bottom: 3px solid black;
-  width: 62px;
+  width: 82px;
   height: 75px;
   margin: 0 5px 8px 5px;
+  padding-bottom: 60px;
 }
 
 #letter-spaces {
   display: flex;
   justify-content: center;
+  margin-bottom: 15px;
 }
 
 #letter-box, #letter-box2, #letter-box3 {
@@ -59,18 +64,19 @@
 }
 
 .choose-letter {
-  border: 4px solid orange;
   margin: 4px;
   width: 100px;
-  height: 100px;
+  height: 80px;
   text-align: center;
   &:hover {
     cursor: pointer;
+    color: $hovergreen;
   }
 }
 
 .clicked {
-  background-color: purple;
+  color: white;
+  pointer-events: none;
 }
 
 #wrong-number {
@@ -78,7 +84,11 @@
   padding: 5px;
 }
 
-#you-lose {
+#you-lose, #you-win {
   border-bottom: 2px dashed red;
   font-size: 30px;
+}
+
+#comet-8 {
+  
 }
