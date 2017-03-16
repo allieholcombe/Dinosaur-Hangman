@@ -2,10 +2,6 @@ var Word = require('./../js/dinoletters.js').wordModule;
 
 var letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 
-
-function compareLetters(){
-
-}
 // The line below is the same as $(document).ready...
 $(function(){
   var newWord = new Word();
@@ -19,11 +15,11 @@ $(function(){
   function letterPutter(index, currentLetter){
     console.log("corrent! " + index );
     $('div.blank[data-val=' + index + ']').addClass('yellow');
-    $('div.blank[data-val=' + index + ']').append(currentLetter);
+    $('div.blank[data-val=' + index + ']').text(currentLetter);
   }
 
-  function endGame(){
-    $('#you-lose').text("You killed the dinosaurs! Now we know what ACTUALLY caused their extinction...");
+  function endGame(dinoName){
+    $('#you-lose').text("You killed the " + dinoName + "! Now we know what ACTUALLY caused the dinosaurs' extinction... (your terrible hangman skills)");
   }
 
   function wrongCounter(counter){

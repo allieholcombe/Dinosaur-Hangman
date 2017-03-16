@@ -5,21 +5,21 @@ var correctCounter = 0;
 var counter = 0;
 
 function Word(){
+  dinoName: "";
 }
 
 Word.prototype.getWord = function(letterSpacer) {
   $.get('http://dinoipsum.herokuapp.com/api/?format=json&paragraphs=1&words=1')
   .then(function(response){
-    var guessWord = response[0].toString().toUpperCase();
-    console.log(guessWord);
+    var dinoName = response[0].toString();
+    Word.dinoName = dinoName;
+    var guessWord = dinoName.toUpperCase();
     wordArray = guessWord.split('');
     letterSpacer(wordArray);
   });
 }
 
-Word.prototype.putLetter = function(currentLetter, letterPutter, wrongCounter, endGame) {
-  console.log("backend:" + currentLetter);
-  console.log(wordArray);
+Word.prototype.putLetter = function(currentLetter, letterPutter, wrongCounter, endGame, dinoName) {
   correctCounter = 0;
   for(i = 0; i < wordArray.length; i++){
     if(currentLetter === wordArray[i]){
@@ -30,15 +30,11 @@ Word.prototype.putLetter = function(currentLetter, letterPutter, wrongCounter, e
   if(correctCounter === 0){
     counter += 1;
     if (counter === 8) {
-      endGame();
+      endGame(Word.dinoName);
     } else {
       wrongCounter(counter);
     }
-    console.log("wrong");
-    console.log(counter);
   }
 }
-
-
 
 exports.wordModule = Word;
