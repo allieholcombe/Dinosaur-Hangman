@@ -19,7 +19,12 @@ $(function(){
   }
 
   function endGame(dinoName){
-    $('#you-lose').text("You killed the " + dinoName + "! Now we know what ACTUALLY caused the dinosaurs' extinction... (your terrible hangman skills)");
+    $('#explosion').show();
+    $('.stuff-box').hide();
+    $('.dino-animation').css('overflow', 'visible');
+    $('#you-lose').show().css('display', 'inline-block');
+    $('#you-lose p span').text(dinoName);
+    // $('#you-lose').show();
   }
 
   function winGame(dinoName){
@@ -27,7 +32,6 @@ $(function(){
   }
 
   function wrongCounter(counter){
-    $('#wrong-number').text(counter);
     for (i = 2; i < 8; i++) {
       if (counter === i) {
         $('#comet').removeClass('comet-' + (i-1)).addClass('comet-' + i);
@@ -59,4 +63,8 @@ $(function(){
     console.log(currentLetter);
     newWord.putLetter(currentLetter, letterPutter, wrongCounter, endGame, winGame);
   });
+
+  $('#lose-again').click(function() {
+    location.reload();
+  })
 });
