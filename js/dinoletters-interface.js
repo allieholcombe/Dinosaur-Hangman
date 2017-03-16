@@ -22,8 +22,11 @@ $(function(){
     $('div.blank[data-val=' + index + ']').append(currentLetter);
   }
 
-  function wrongCounter(counter){
+  function endGame(){
+    $('#you-lose').text("You killed the dinosaurs! Now we know what ACTUALLY caused their extinction...");
+  }
 
+  function wrongCounter(counter){
     $('#wrong-number').text(counter);
   }
 
@@ -46,6 +49,6 @@ $(function(){
     $(this).addClass('clicked');
     var currentLetter = $(this).data('val');
     console.log(currentLetter);
-    newWord.putLetter(currentLetter, letterPutter, wrongCounter);
+    newWord.putLetter(currentLetter, letterPutter, wrongCounter, endGame);
   });
 });

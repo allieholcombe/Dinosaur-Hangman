@@ -17,7 +17,7 @@ Word.prototype.getWord = function(letterSpacer) {
   });
 }
 
-Word.prototype.putLetter = function(currentLetter, letterPutter, wrongCounter) {
+Word.prototype.putLetter = function(currentLetter, letterPutter, wrongCounter, endGame) {
   console.log("backend:" + currentLetter);
   console.log(wordArray);
   correctCounter = 0;
@@ -29,7 +29,11 @@ Word.prototype.putLetter = function(currentLetter, letterPutter, wrongCounter) {
   }
   if(correctCounter === 0){
     counter += 1;
-    wrongCounter(counter);
+    if (counter === 8) {
+      endGame();
+    } else {
+      wrongCounter(counter);
+    }
     console.log("wrong");
     console.log(counter);
   }
