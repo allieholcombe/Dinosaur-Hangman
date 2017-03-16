@@ -28,7 +28,11 @@ $(function(){
   }
 
   function winGame(dinoName){
-    $('#you-win').text("You saved the " + dinoName + "! You win!");
+    $('#comet').hide();
+    $('#dino-party').show();
+    $('.stuff-box').hide();
+    $('#you-win').show().css('display', 'inline-block');
+    $('#you-win p span').text(dinoName);
   }
 
   function wrongCounter(counter){
@@ -64,7 +68,9 @@ $(function(){
     newWord.putLetter(currentLetter, letterPutter, wrongCounter, endGame, winGame);
   });
 
-  $('#lose-again').click(function() {
+  $('.play-again').click(function() {
     location.reload();
   })
+
+
 });

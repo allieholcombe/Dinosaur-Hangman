@@ -186,6 +186,11 @@ $darkred: #b10019;
   // margin: 0 auto;
 }
 
+#you-win {
+  top: 50%;
+  transform: translate(-50%);
+}
+
 #you-lose h1, #you-win h1 {
   font-family: 'Dinosaur', sans-serif;
   font-size: 70px;
@@ -194,7 +199,11 @@ $darkred: #b10019;
   text-shadow: 3px 3px $darkred;
 }
 
-#you-lose p, #you-win p {
+#you-win h1 {
+  text-shadow: 3px 3px orange;
+}
+
+#you-lose p {
   padding: 20px;
   background-color: white;
   font-size: 30px;
@@ -216,8 +225,30 @@ $darkred: #b10019;
   }
 }
 
+#you-win p {
+  padding: 20px;
+  background-color: white;
+  font-size: 30px;
+  font-family: 'Arvo', serif;
+  border-radius: 20px;
+  border: 4px solid orange;
+  text-align: center;
+}
+
+.win {
+  background-color: orange;
+}
+
+
 .btn:focus,.btn:active {
    outline: none !important;
+}
+
+#dino-party{
+  position: absolute;
+  right: 0px;
+  z-index: -1;
+  display: none;
 }
 
 #comet-8 {
