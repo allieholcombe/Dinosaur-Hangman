@@ -29,6 +29,11 @@
   }
 }
 
+#wrong-number {
+  border: 3px solid blue;
+  padding: 5px;
+}
+
 .clicked {
   background-color: purple;
 }
@@ -48,8 +53,4 @@
 img {
   height: 400px;
   width: auto;
-}
-
-.unclickable {
-
 }

@@ -22,6 +22,13 @@ $(function(){
     $('div.blank[data-val=' + index + ']').append(currentLetter);
   }
 
+  function wrongCounter(counter){
+
+    $('#wrong-number').text(counter);
+  }
+
+  wrongCounter(0);
+
   var currentWord = newWord.getWord(letterSpacer);
 
   for(i = 0; i < 9; i++){
@@ -39,7 +46,6 @@ $(function(){
     $(this).addClass('clicked');
     var currentLetter = $(this).data('val');
     console.log(currentLetter);
-    newWord.putLetter(currentLetter, letterPutter);
-
+    newWord.putLetter(currentLetter, letterPutter, wrongCounter);
   });
 });
