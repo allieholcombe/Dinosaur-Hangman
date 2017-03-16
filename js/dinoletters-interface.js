@@ -28,6 +28,14 @@ $(function(){
 
   function wrongCounter(counter){
     $('#wrong-number').text(counter);
+    for (i = 2; i < 8; i++) {
+      if (counter === i) {
+        $('#comet').removeClass('comet-' + (i-1)).addClass('comet-' + i);
+      }
+      if (counter === 1) {
+        $('#comet').addClass('comet-1').show();
+      }
+    }
   }
 
   wrongCounter(0);

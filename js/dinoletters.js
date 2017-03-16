@@ -23,7 +23,6 @@ Word.prototype.getWord = function(letterSpacer) {
 
 Word.prototype.putLetter = function(currentLetter, letterPutter, wrongCounter, endGame, winGame, dinoName) {
   correctCounter = 0;
-  debugger;
   for(i = 0; i < wordArray.length; i++){
     if(currentLetter === wordArray[i]){
       letterPutter(i, currentLetter);

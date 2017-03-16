@@ -24,6 +24,7 @@ $hovergreen: #94c64d;
   width: 1200px;
   height: 550px;
   position: relative;
+  overflow: hidden;
 }
 
 #dino {
@@ -31,6 +32,76 @@ $hovergreen: #94c64d;
   bottom: 0;
   width: 30%;
   left: 10%;
+}
+
+#comet {
+  display: none;
+  font-size: 70px;
+  position: absolute;
+  z-index: -1;
+}
+
+.comet-1 {
+  left: 1050px;
+  bottom: 480px;
+  transform: rotate(0deg);
+  img {
+    height: 75px;
+  }
+}
+
+.comet-2 {
+  left: 900px;
+  bottom: 450px;
+  transform: rotate(0deg);
+  img {
+    height: 120px;
+  }
+}
+
+.comet-3 {
+  left: 725px;
+  bottom: 390px;
+  transform: rotate(355deg);
+  img {
+    height: 200px;
+  }
+}
+
+.comet-4 {
+  left: 600px;
+  bottom: 360px;
+  transform: rotate(347deg);
+  img {
+    height: 275px;
+  }
+}
+
+.comet-5 {
+  left: 420px;
+  bottom: 345px;
+  transform: rotate(340deg);
+  img {
+    height: 340px;
+  }
+}
+
+.comet-6 {
+  left: 280px;
+  bottom: 360px;
+  transform: rotate(330deg);
+  img {
+    height: 450px;
+  }
+}
+
+.comet-7 {
+  left: 30px;
+  bottom: 470px;
+  transform: rotate(320deg);
+  img {
+    height: 800px;
+  }
 }
 
 .letter {
@@ -90,5 +161,5 @@ $hovergreen: #94c64d;
 }
 
 #comet-8 {
-  
+
 }
